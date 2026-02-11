@@ -1,0 +1,51 @@
+/* ===== PAGE BASE ===== */
+body {
+  background-color: white;      /* Page background color */
+  font-family: sans-serif;      /* Default font for the page */
+
+  padding: 50px 10px;           /* Space inside body (top/bottom 50px, left/right 10px) */
+  margin: 0 auto;               /* Remove default margin, center horizontally */
+
+  width: 90vw;                  /* Body width = 90% of viewport width */
+  min-height: calc(100vh - 100px); /* Full screen height minus vertical padding */
+
+  text-align: center;           /* Center inline / inline-block elements */
+}
+
+/* ===== HORIZONTAL LINE ===== */
+hr {
+  margin: 30px auto;            /* Space above & below, centered horizontally */
+  width: 80%;                   /* Line width relative to body */
+  background-color: black;      /* Line color */
+  height: 2px;                  /* Line thickness */
+}
+
+/* ===== MAIN WRAPPER ===== */
+main {
+  margin: 0 auto;               /* Center main container */
+}
+
+/* ===== CONTENT SECTIONS ===== */
+section {
+  text-align: center;           /* Center text inside each section */
+  padding: 50px 5px;            /* Internal spacing */
+
+  display: inline-block;        /* Allows sections to sit side-by-side */
+  vertical-align: top;          /* Align sections at the top (IMPORTANT) */
+
+  width: 30%;                   /* Each section takes 30% width */
+  min-height: 100px;            /* Prevent collapsing if content is small */
+}
+
+/*
+WHY vertical-align: top?
+- inline-block elements align to text baseline by default
+- this forces all sections to line up from the top
+*/
+
+/* ===== LIST STYLING ===== */
+ul {
+  text-align: left;             /* Override section center alignment */
+  list-style: inside;           /* Bullets inside content box */
+  padding-left: 10px;           /* Small indent for readability */
+}
