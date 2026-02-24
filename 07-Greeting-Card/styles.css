@@ -1,0 +1,101 @@
+/* ====== PAGE (WHOLE DOCUMENT) ====== */
+body {
+  font-family: Arial, sans-serif;   /* Main font for the page */
+  padding: 40px;                    /* Space inside the browser edges */
+  text-align: center;               /* Center text horizontally */
+  background-color: brown;          /* Page background color */
+}
+
+/* ====== CARD CONTAINER ====== */
+.card {
+  background-color: white;          /* Card background */
+  max-width: 400px;                 /* Card max width */
+  padding: 40px;                    /* Space inside the card */
+  margin: 0 auto;                   /* Center card horizontally */
+  border-radius: 10px;              /* Rounded corners */
+  box-shadow: 0 4px 8px gray;        /* Shadow: x y blur color */
+
+  /* Smooth animation when transform or background-color changes */
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  background-color: khaki;          /* Change background color */
+  transform: scale(1.1);            /* Make card bigger (10%) */
+}
+
+/* ====== HEADING DECORATION ====== */
+h1::before {
+  content: "🥳 ";                   /* Emoji before h1 text */
+}
+
+h1::after {
+  content: " 🥳";                   /* Emoji after h1 text */
+}
+
+/* ====== MESSAGE TEXT ====== */
+.message {
+  font-size: 1.2em;                 /* Slightly larger text */
+  margin-bottom: 20px;              /* Space below message */
+}
+
+/* ====== LINK / BUTTON CONTAINER ====== */
+.card-links {
+  margin-top: 20px;                 /* Space above links */
+  display: flex;                    /* Enable flexbox */
+  justify-content: space-around;    /* Space links evenly */
+}
+
+/* ====== LINK / BUTTON STYLE ====== */
+.card-links a {
+  text-decoration: none;            /* Remove underline */
+  font-size: 1em;                   /* Normal font size */
+  padding: 10px 20px;               /* Button padding */
+  border-radius: 5px;               /* Rounded buttons */
+  color: white;                     /* Text color */
+  background-color: midnightblue;   /* Button color */
+
+  /* Smooth color change on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* When mouse is over the link */
+.card-links a:hover {
+  background-color: orangered;      /* Hover color */
+}
+
+/* When link is being clicked */
+.card-links a:active {
+  background-color: midnightblue;  /* Click color */
+}
+
+/* When link is focused (keyboard navigation) */
+.card-links a:focus {
+  outline: 2px solid yellow;        /* Focus outline for accessibility */
+}
+
+/* After link has been visited */
+.card-links a:visited {
+  color: crimson;                   /* Text color after click */
+}
+
+/* ====== HIDDEN SECTION ====== */
+section {
+  margin: 20px auto;                /* Space and center section */
+  max-width: 600px;                 /* Max width */
+  background-color: whitesmoke;     /* Background color */
+  padding: 20px;                    /* Inner spacing */
+  border-radius: 10px;              /* Rounded corners */
+  display: none;                    /* Hidden by default */
+}
+
+/* When hovering over section */
+section:hover {
+  transform: skewX(10deg);          /* Tilt section sideways */
+}
+
+/* Show section when targeted via URL (#id) */
+section:target {
+  display: block;                   /* Make section visible */
+}
