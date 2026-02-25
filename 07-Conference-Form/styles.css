@@ -1,99 +1,113 @@
+/* ====== GLOBAL STYLE ====== */
 body {
-  background-color: MidnightBlue;
-  color: whitesmoke;
+  background-color: MidnightBlue; /* Warna background halaman */
+  color: whitesmoke;              /* Warna teks default */
 }
 
+/* ====== CONTAINER UTAMA ====== */
 .container {
-    background-color: #ffffff1a;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 10px 20px;
-    box-shadow: 0 5px 15px black;  
+  background-color: #ffffff1a;   /* Putih transparan */
+  width: 80%;                     /* Lebar relatif layar */
+  max-width: 600px;               /* Batas maksimal lebar */
+  border-radius: 10px;            /* Sudut membulat */
+  margin: 20px auto;              /* Tengah horizontal */
+  padding: 10px 20px;             /* Ruang dalam */
+  box-shadow: 0 5px 15px black;   /* Bayangan */
 }
 
+/* ====== TEXT ALIGN ====== */
 .center {
-  text-align: center;
+  text-align: center;             /* Teks rata tengah */
 }
 
+/* ====== DESKRIPSI ====== */
 .description {
-  font-size: 1.2rem;
+  font-size: 1.2rem;              /* Ukuran teks lebih besar */
 }
 
+/* ====== FIELDSET ====== */
 fieldset {
-  border: 1px solid gray;
-  border-radius: 5px;
-  margin: 20px 0;
-  padding: 20px;
+  border: 1px solid gray;         /* Garis fieldset */
+  border-radius: 5px;             /* Sudut membulat */
+  margin: 20px 0;                 /* Jarak atas & bawah */
+  padding: 20px;                  /* Ruang dalam */
 }
 
+/* Judul fieldset */
 fieldset legend {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.3rem;              /* Ukuran judul */
+  font-weight: 600;               /* Tebal */
 }
 
+/* ====== LABEL ====== */
 label {
-  font-size: 1.2rem;
+  font-size: 1.2rem;              /* Ukuran teks label */
 }
 
+/* Semua label KECUALI label radio */
 label:not(.contact-method) {
-  display: block;
-  margin: 10px 0;
+  display: block;                 /* Bikin satu baris */
+  margin: 10px 0;                 /* Jarak antar label */
 }
 
+/* ====== INPUT & TEXTAREA ====== */
 input:not(.contact-method-radio-btn),
 textarea {
-  background-color: #ffffff1a;
-  width: 95%;
-  border: 1px solid gray;
-  border-radius: 5px;
-  padding: 10px;
+  background-color: #ffffff1a;   /* Background transparan */
+  width: 95%;                     /* Lebar input */
+  border: 1px solid gray;         /* Border */
+  border-radius: 5px;             /* Sudut membulat */
+  padding: 10px;                  /* Ruang dalam */
 }
 
+/* Warna teks input & placeholder */
 input,
 input::placeholder,
 textarea {
-  color: whitesmoke;
+  color: whitesmoke;              /* Warna teks */
 }
 
-
+/* ====== CUSTOM RADIO BUTTON ====== */
 .contact-method-radio-btn {
-  appearance: none;
+  appearance: none;               /* Hilangkan style default */
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  border: 2px solid gray;
-  vertical-align: bottom;
+  border-radius: 50%;             /* Bulat */
+  border: 2px solid gray;         /* Garis radio */
+  vertical-align: bottom;         /* Sejajar teks */
 }
 
+/* Lingkaran dalam radio */
 .contact-method-radio-btn::before {
   display: block;
   content: " ";
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  transform: translate(3px, 3px) scale(0);
-  transition: all 0.3s ease-in;
+  transform: translate(3px, 3px) scale(0); /* Awalnya hilang */
+  transition: all 0.3s ease-in;             /* Animasi */
 }
 
+/* Saat radio dipilih */
 .contact-method-radio-btn:checked::before {
-  transform: translate(3px, 3px) scale(1);
-  background-color: lightgreen;
+  transform: translate(3px, 3px) scale(1); /* Muncul */
+  background-color: lightgreen;             /* Warna aktif */
 }
 
+/* ====== SUBMIT BUTTON ====== */
 .submit-btn {
-  cursor: pointer;
-  background-color: royalblue;
-  color: whitesmoke;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 20px;
-  font-size: 1.1rem;
+  cursor: pointer;               /* Kursor tangan */
+  background-color: royalblue;   /* Warna tombol */
+  color: whitesmoke;             /* Warna teks */
+  border: none;                  /* Hilangkan border */
+  border-radius: 6px;            /* Sudut membulat */
+  padding: 12px 20px;            /* Ukuran tombol */
+  font-size: 1.1rem;             /* Ukuran teks */
   display: block;
-  margin: auto;
+  margin: auto;                  /* Tengah */
 }
 
+/* Efek hover tombol */
 .submit-btn:hover {
-  background-color:midnightblue;
+  background-color: midnightblue; /* Warna saat hover */
 }
