@@ -1,0 +1,124 @@
+body{
+  font-family: Arial, sans-serif;
+  background-color: white;
+  padding: 20px; /* Mengatur jarak internal (inner space) elemen */
+  
+}
+
+.container{
+  max-width: 600px; /*Lebar Maximal*/
+  margin: 0 auto; /* Menciptakan ruang kosong di luar batas border suatu elemen HTML */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  /* 0 Bayangan ke kiri / kanan (Nilai positif -> ke kanan, Nilai negatif -> ke kiri) */
+  /* 4px Bayangan ke atas / bawah  (Nilai positif -> ke bawah, Nilai negatif -> ke atas) */
+  /* 8px blur radius semakin besar -> semakin lembut */
+  /* RGB 0.1 transparasi bayangan */
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block; /* Membuat satu blok baris agar tidak terisi oleh 2 nilai */
+  margin-bottom: 5px;
+  font-weight: bold; /* Merubah font */
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  /* secara default nilainya adalah content-box */
+  /* border-box digunakan agar elemen tidak melebar sendiri gara-gara padding dan border */
+}
+
+.radio-group {
+  display: flex; /* Ukurannya mengikuti kontentnya jadi nanti dalam satu baris ada beberapa kontent */
+  align-items: center; 
+  margin-top: 15px;
+}
+
+.radio-group input[type="radio"]{
+  margin-right: 10px;
+  -webkit-appearance: none; /* Properti CSS yang mengontrol tampilan default (native UI) dari browser */
+  -moz-appearance: none; /* Fungsinya sama akan tetapi ini untuk tampilan pada mozila */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%; /* Memperbaiki sisi lingkaran pada radio button karena bentuk sebelumnya*/
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.radio-group label {
+  margin: 0;
+  font-weight: normal; 
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input:focus, textarea:focus{ /* Ketika input atau text area sedang di klik*/
+  border-color: blue;
+  outline: none;
+}
+
+input:invalid, select:invalid, textarea:invalid { /* Ketika isi dari contentnya tidak sesudai dengan format typenya */
+  border-color: red;
+}
+
+input:valid, select:valid, textarea:valid { /* Ketika isi dari contentnya sesuai dengan format typenya */
+  border-color: green;
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: green;
+  background-color: green;
+  box-shadow: inset 0 0 0 5px white;
+  /* inset adalah bayangan masuk kedalam elemen */
+  /* Angka 1 menunjukkan untuk geser ke kiri dan kanan berdasarkan garis bilangan sumbu X*/
+  /* Angka 2 menunjukkan untuk geser ke atas dan bawah berdasarkan garis bilangan sumbu Y*/
+  /* Angka 3 menunjukkan untuk bayangan tajaam, tidak blur sama sekali*/
+  /* Angka 4 menunjukkan untuk seberapa tebal bayangan kedalam*/
+  /* white menunjukkan untuk warna yang akan melebar kedalam*/
+}
+
+button:hover {
+  background-color: black;
+}
+
+input[type="radio"]:checked + label { 
+  /* "+" Menandakan sibling selector label harus langsung setelah input dan tidak boleh ada elemen lain di antaranya*/
+  color: green
+}
+
+button:disabled {
+  background-color: grey;
+}
+
+input:first-of-type{
+  border-bottom-left-radius: 4px; /* Merubah border bagian kiri atas */
+  border-bottom-right-radius: 4px; /* Merubah border bagian kanan atas */
+}
+
+textarea:nth-child(5){
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
