@@ -1,0 +1,61 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  background-color:#f4f4f4;
+}
+
+/* Menggunakan flexbox untuk menyusun elemen h1 dan .color-grid
+   secara vertikal (atas ke bawah) dan memposisikannya di tengah */
+
+h1{
+  margin-bottom: 20px;
+}
+
+.color-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Membuat layout grid yang otomatis membuat kolom
+   dengan lebar minimal 150px dan maksimal mengisi ruang (1fr).
+   Grid akan menyesuaikan jumlah kolom berdasarkan lebar container */
+
+.color-box{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  width:100px;
+  height:100px;
+}
+
+/* Menggunakan grid untuk memusatkan isi elemen
+   secara horizontal dan vertikal di dalam kotak */
+
+.color1{  
+  background-color:#f3f300;
+}
+
+.color2{
+  background-color:rgb(255,0,255);
+}
+
+.color3{
+  background-color:blue;
+}
+
+.color4{
+  background-color:hsl(186,76%,20%);
+}
+
+.color5{
+background-color:black;
+}
