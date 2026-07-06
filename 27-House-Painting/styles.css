@@ -1,0 +1,103 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(lightblue 60%, green 40%);
+}
+
+#house {
+    position: relative;
+    top: 130px;
+    left: 400px;
+    width: 500px;
+    height: 400px;
+    background-color: salmon;
+    border: 6px solid brown;
+}
+
+#chimney {
+    position: absolute;
+    width: 90px;
+    height: 100px;
+    top: -100px;
+    left: 65%;
+    /* transform: rotate(90deg); */
+    background: repeating-linear-gradient(
+         #e6e6e6 0%,#e6e6e6 10%,black 10%,black 12%
+    );
+    border: 2px solid black;
+    z-index: -1;
+}
+
+#roof {
+    position: absolute;
+    border: 2px;
+    width: 500px;
+    height: 100px;
+    top: 0;
+    background-color: black;
+    background: repeating-linear-gradient(
+        45deg, 
+        brown, 
+        brown 1%, 
+        transparent 1%, 
+        transparent 5%),
+        repeating-linear-gradient(
+            -45deg, 
+            brown, 
+            brown 1%, 
+            transparent 1%, 
+            transparent 5%
+        )
+}
+
+#window-1 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: #FFFFA6;
+    bottom: 170px;
+    left: 40px;
+    border: 5px solid brown;
+    background: repeating-linear-gradient(90deg, #FFFFA6, #FFFFA6 48%, brown 49%, brown 52%);
+}
+
+#window-2 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: #FFFFA6;
+    bottom: 170px;
+    left: 350px;
+    border: 5px solid brown;
+    background: repeating-linear-gradient(90deg, #FFFFA6, #FFFFA6 48%, brown 49%, brown 52%);
+}
+
+#door {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    background-color: lightgray;
+    bottom: 0%;
+    left: 175px;
+    border: 5px solid brown;
+    z-index: 0;
+    transform: translateY(6px);
+}
+
+#door-handle{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    bottom: 90px;
+    background-color: brown;
+    border-radius: 100%;
+}
+
+#welcome {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border: 10px solid black;
+}
